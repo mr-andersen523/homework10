@@ -36,3 +36,47 @@ async function start(){
         console.log("You can't make a team without team members...");
         return;
     }
+
+    // based on size 
+    for(i = 1; i < teamSize; i++){
+
+        // Global variables set
+        let name;
+        let id;
+        let title;
+        let email;
+
+        // Questions prompted for basic employee
+        await inquirer.prompt([ 
+            {
+                type: "input",
+                message: `What is employee (${i})'s name?`,
+                name: "name"
+            },
+            {
+                type: "input",
+                message: `What is the employee (${i})'s id?`,
+                name: "id"
+            },
+            {
+                type: "input",
+                message: `What is the employee (${i})'s Email?`,
+                name: "email"
+            },
+            {
+                type: "list",
+                message: `what the employee (${i})'s role?`,
+                name: "title",
+                choices: ["Engineer", "Intern", "Manager"]
+            }
+        ])
+        .then((data) => {
+
+            // Takes data from user and places value in global variables
+            name = data.name;
+            id = data.id;
+            title = data.title;
+            email = data.email;
+        });
+
+        
