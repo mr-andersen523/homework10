@@ -121,3 +121,24 @@ async function start(){
                 });
                 break;
 
+                //ENGINEER
+
+            case "Engineer":
+                await inquirer.prompt([
+                    {
+                        type: "input",
+                        message: "What is your Engineer's GitHub?",
+                        name: "github"
+                    }
+                ])
+                .then((data) => {
+                    const engineer = new Engineer(name, id, email, data.github);
+                    teamMember = fs.readFileSync("templates/engineer.html");
+                    teamHTML = teamHTML + "\n" + eval('`'+ teamMember +'`');
+                });
+                break;
+
+        } // switch case end
+    } // end of loop
+
+    
