@@ -141,4 +141,25 @@ async function start(){
         } // switch case end
     } // end of loop
 
+    ////////////////////////////////////////
+
+    const mainHTML = fs.readFileSync("templates/main.html");
     
+
+    teamHTML = eval('`'+ mainHTML +'`');
+
+    // write file to new team.html file
+    fs.writeFile("output/team.html", teamHTML, function(err) {
+
+        if (err) {
+          return console.log(err);
+        }
+      
+        console.log("It worked!");
+      
+      });
+
+}
+
+
+start();
