@@ -104,5 +104,20 @@ async function start(){
                 });
                 break;
 
-                
+                                //INTERN
+
+            case "Intern":
+                await inquirer.prompt([
+                    {
+                        type: "input",
+                        message: "What school does your Intern attend?",
+                        name: "school"
+                    }
+                ])
+                .then((data) => {
+                    const intern = new Intern(name, id, email, data.school);
+                    teamMember = fs.readFileSync("templates/intern.html");
+                    teamHTML = teamHTML + "\n" + eval('`'+ teamMember +'`');
+                });
+                break;
 
