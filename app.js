@@ -55,28 +55,54 @@ async function start(){
             },
             {
                 type: "input",
-                message: `What is the employee (${i})'s id?`,
+                message: `What is employee (${i})'s id?`,
                 name: "id"
             },
             {
                 type: "input",
-                message: `What is the employee (${i})'s Email?`,
+                message: `What is employee (${i})'s email?`,
                 name: "email"
             },
             {
                 type: "list",
-                message: `what the employee (${i})'s role?`,
+                message: `What employee (${i})'s role?`,
                 name: "title",
                 choices: ["Engineer", "Intern", "Manager"]
             }
         ])
         .then((data) => {
 
-            // Takes data from user and places value in global variables
+            // puts user data in global variables
             name = data.name;
             id = data.id;
             title = data.title;
             email = data.email;
         });
 
-        
+        // switch prompts if MANAGER
+        switch (title){
+            case "Manager":
+
+                //  Manager's Office Number
+                await inquirer.prompt([
+                    {
+                        type: "input",
+                        message: "What is the Manager's office number?",
+                        name: "officeNo"
+                    }
+                ])
+                .then((data) => {
+
+                    // Create new object with user data
+                    const manager = new Manager(name, id, email, data.officeNo);
+
+                    // Read and place HTML from manager.html in teamMember Variable
+                    teamMember = fs.readFileSync("templates/manager.html");
+
+                    // Add string to team HTML
+                    teamHTML = teamHTML + "\n" + eval('`'+ teamMember +'`');
+                });
+                break;
+
+                
+
