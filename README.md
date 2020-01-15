@@ -18,13 +18,13 @@ Use this application to create a engineering team with some simple prompts!
 9. Open in your browser
 
 ### Gif Demo
-![Gif1](preview/hw10gif1.gif) {:height="476px" width="422px"}
+![Gif1](preview/hw10gif1.gif=422x476)
 <br>
-![Gif2](preview/hw10gif2.gif)
+![Gif2](preview/hw10gif2.gif=422x476)
 <br>
-![Gif3](preview/hw10gif3.gif)
+![Gif3](preview/hw10gif3.gif=422x476)
 <br>
-![Gif4](preview/hw10gif4.gif)
+![Gif4](preview/hw10gif4.gif=422x476)
 <br>
 ![Gif5](preview/hw10gif5.gif)
 
