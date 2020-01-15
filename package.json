@@ -1,7 +1,7 @@
 {
-  "name": "unit10hw",
+  "name": "homework10",
   "version": "1.0.0",
-  "description": "OOP and testing for week 10 homework",
+  "description": "OPP Template Engine- Employee Summary (Homework 10)",
   "main": "app.js",
   "directories": {
     "lib": "lib",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevetrilogy/unit10hw.git"
+    "url": "git+https://github.com/mr-andersen523/homework10.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stevetrilogy/unit10hw/issues"
+    "url": "https://github.com/mr-andersen523/homework10/issues"
   },
-  "homepage": "https://github.com/stevetrilogy/unit10hw#readme",
+  "homepage": "https://github.com/mr-andersen523/homework10#readme",
   "dependencies": {
     "inquirer": "^6.3.1"
   },
